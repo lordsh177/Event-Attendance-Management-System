@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Event Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Event Attendance Dashboard</h1>
+        <p>This is an <span>oraganizer</span> page</p>
+        <button id="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Dashboard Grid -->
+    <div class="dashboard-grid">
+
+        <a href="organizer_manage_account.html" class="dashboard-card view">
+            <h3>Manage Account</h3>
+            <p>Manage organizer only account.</p>
+        </a>
+        
+        <!-- Event and Attendance -->
+        <a href="organizer_events.html" class="dashboard-card events">
+            <h3>Register Events</h3>
+            <p>Create and manage upcoming events.</p>
+        </a>
+        <a href="organizer_view_events.html" class="dashboard-card history">
+            <h3>View Events</h3>
+            <p>View event records.</p>
+        </a>
+
+        <a href="organizer_attendance.html" class="dashboard-card attendance">
+            <h3>Mark Attendance</h3>
+            <p>Record attendance for specific events.</p>
+        </a>
+
+        <a href="organizer_participants.html" class="dashboard-card participants">
+            <h3>Participants</h3>
+            <p>Monitor all event participants.</p>
+        </a>
+
+        <a href="organizer_reports.html" class="dashboard-card reports">
+            <h3>Reports</h3>
+            <p>Generate event and attendance summaries.</p>
+        </a>
+
+        <a href="organizer_history.html" class="dashboard-card history">
+            <h3>Attendance History</h3>
+            <p>View past attendance records.</p>
+        </a>
+
+        
+    </div>
+    <button id="export-backup-btn" class="btn-export">Download Backup</button>
+    <footer class="footer">
+        <p>© 2025 Event Attendance Management System</p>
+        <a href="about.html">About Us</a>
+        <a href="#" id="open-contact-modal">Contact Us</a>
+    </footer>
+<!-- CONTACT US MODAL -->
+<div id="contact-modal" class="modal">
+  <div class="modal-content form-card contact-box">
+
+    <h3>Contact Us</h3>
+
+    <label>Your Name (optional):</label>
+    <input type="text" id="contact-name" placeholder="Enter name or leave empty">
+
+    <label>Your Email (optional):</label>
+    <input type="email" id="contact-email" placeholder="Enter email or leave empty">
+
+    <label>Your Message:</label>
+    <textarea id="contact-message" placeholder="Type your concern or feedback..." rows="4"></textarea>
+
+    <label>Rate Our System:</label>
+    <div class="stars" id="rating-stars">★★★★★</div>
+    <input type="hidden" id="contact-rating" value="5">
+
+    <div class="tip-box">
+      <p>Support development ❤️</p>
+      <img src="assets/gcash_qr.png" class="gcash-qr">
+    </div>
+
+    <div class="form-actions">
+      <button id="send-contact-btn" type="button">Send</button>
+      <button id="close-contact-btn" class="clear-btn" type="button">Cancel</button>
+    </div>
+
+    <p id="contact-response"></p>
+
+  </div>
+</div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
